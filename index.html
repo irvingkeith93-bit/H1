@@ -138,23 +138,20 @@ img,svg{display:block;max-width:100%}
 .nav-links a{transition:color .2s ease,transform .2s ease}
 .nav-links a:hover{color:var(--gold-hi);transform:translateY(-1px)}
 .nav-consult{
-  position:relative;
   display:inline-flex;
   align-items:center;
+  justify-content:center;
   gap:7px;
-  padding:9px 0;
-  color:#fff!important;
-  border:0!important;
-  background:none!important;
+  min-height:42px;
+  padding:0 17px;
+  border:1px solid rgba(255,240,174,.50);
+  border-radius:999px;
+  color:#080808!important;
+  background:linear-gradient(180deg,#fff0ae,#d5a13b 57%,#9b6711)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.55),0 12px 32px rgba(215,163,59,.16);
+  transition:transform .25s ease,box-shadow .25s ease;
 }
-.nav-consult::after{
-  content:"";
-  position:absolute;
-  left:0;right:22px;bottom:4px;height:1px;
-  background:linear-gradient(90deg,var(--gold),var(--gold-hi));
-  transform:scaleX(.32);transform-origin:left;transition:transform .25s ease;
-}
-.nav-consult:hover::after{transform:scaleX(1)}
+.nav-consult:hover{transform:translateY(-2px);box-shadow:inset 0 1px rgba(255,255,255,.65),0 16px 38px rgba(215,163,59,.26)}
 
 /* Liquid glass */
 .glass{
@@ -238,6 +235,16 @@ p{color:var(--muted);line-height:1.78}
   transition:.25s ease;
 }
 .secondary-action:hover{border-color:rgba(255,224,146,.48);background:rgba(215,163,59,.08);transform:translateY(-2px)}
+.booking-button{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:48px;padding:0 22px;border-radius:999px;
+  border:1px solid rgba(255,240,174,.50);
+  color:#080808;font-size:.70rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;
+  background:linear-gradient(180deg,#fff0ae,#d5a13b 57%,#9b6711);
+  box-shadow:inset 0 1px rgba(255,255,255,.55),0 14px 38px rgba(215,163,59,.17);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.booking-button:hover{transform:translateY(-2px);box-shadow:inset 0 1px rgba(255,255,255,.65),0 18px 48px rgba(215,163,59,.27)}
 
 .standard-panel{padding:clamp(28px,4vw,48px);border-radius:30px;transform:translateX(clamp(14px,1.5vw,24px))}
 .standard-panel h2{font-size:clamp(2.15rem,3.7vw,3.6rem);max-width:11ch;margin:13px 0 14px}
@@ -343,7 +350,7 @@ textarea{grid-column:1/-1;min-height:150px;resize:vertical}
   h2{font-size:clamp(2.2rem,11vw,3.3rem)}
   .hero-copy p,.lead,.story-copy{font-size:.96rem}
   .hero-actions{display:grid;gap:13px;width:100%}
-  .text-action,.secondary-action{width:100%;justify-content:center;text-align:center}
+  .text-action,.secondary-action,.booking-button{width:100%;justify-content:center;text-align:center}
   .standard-panel,.service-card,.feature-card,.step,.priority,.form-wrap{border-radius:22px}
   .standard-panel,.service-card,.feature-card,.priority,.form-wrap{padding:23px 20px}
   .standard-item{grid-template-columns:38px 1fr;gap:10px;padding:17px 0}
@@ -412,7 +419,7 @@ textarea{grid-column:1/-1;min-height:150px;resize:vertical}
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="https://www.instagram.com/h1preservation/" target="_blank" rel="noopener noreferrer" class="nav-instagram" aria-label="Hangar One Preservation on Instagram">Instagram</a>
-      <a href="mailto:admin@h1preservation.com?subject=Private%20Consultation%20Request" class="nav-consult">Request Consultation <span aria-hidden="true">↘</span></a>
+      <a href="https://h1p-100540.square.site/" target="_blank" rel="noopener noreferrer" class="nav-consult" aria-label="Book Hangar One Preservation services online">Book Here <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </nav>
@@ -425,6 +432,7 @@ textarea{grid-column:1/-1;min-height:150px;resize:vertical}
       <h1>Preserve the <span class="gold">Exceptional.</span></h1>
       <p>Hangar One Preservation delivers discreet, exacting care for luxury automobiles, private aircraft and marine vessels. Every surface is treated with the same respect its owner has for the machine itself.</p>
       <div class="hero-actions">
+        <a class="booking-button" href="https://h1p-100540.square.site/" target="_blank" rel="noopener noreferrer" aria-label="Book Hangar One Preservation services online">Book Here <span aria-hidden="true">↗</span></a>
         <a class="text-action" href="mailto:admin@h1preservation.com?subject=Private%20Consultation%20Request">Request Private Consultation <span aria-hidden="true">↘</span></a>
         <a class="secondary-action" href="#services">Explore Services</a>
       </div>
