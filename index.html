@@ -278,6 +278,31 @@
       transition:.25s ease;
     }
     .blue-button:hover{transform:translateY(-2px);border-color:var(--blue-hi);box-shadow:inset 0 1px rgba(255,255,255,.16),0 0 28px rgba(35,152,255,.26)}
+    .hangar-cta-row{width:753px;max-width:100%;margin-top:30px}
+    .hangar-button{
+      position:relative;
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      width:100%;min-height:52px;padding:0 22px;
+      overflow:hidden;
+      border:1px solid rgba(99,192,255,.78);border-radius:10px;
+      color:#f4faff;
+      background:
+        linear-gradient(112deg,rgba(255,255,255,.10),transparent 30%),
+        linear-gradient(90deg,rgba(5,40,77,.88),rgba(4,18,38,.94) 54%,rgba(76,25,3,.76));
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.15),
+        0 0 0 1px rgba(35,152,255,.07),
+        -10px 0 28px rgba(35,152,255,.18),
+        10px 0 28px rgba(255,106,0,.12),
+        0 13px 34px rgba(0,0,0,.34);
+      font-size:.72rem;font-weight:900;letter-spacing:.19em;text-transform:uppercase;
+      transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,filter .25s ease;
+    }
+    .hangar-button::before{
+      content:"";position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(35,152,255,.16),transparent 38%,transparent 62%,rgba(255,106,0,.12));
+    }
+    .hangar-button:hover{transform:translateY(-2px);filter:brightness(1.08);border-color:#7fcbff;box-shadow:inset 0 1px rgba(255,255,255,.18),-12px 0 34px rgba(35,152,255,.28),12px 0 34px rgba(255,106,0,.20),0 15px 38px rgba(0,0,0,.38)}
     .text-action{
       display:inline-flex;align-items:center;gap:9px;padding:10px 0;
       position:relative;color:#edf7ff;text-transform:uppercase;font-size:.68rem;font-weight:850;letter-spacing:.15em;
@@ -471,7 +496,7 @@
 
     @media(max-width:1000px){
       :root{--container:min(880px,calc(100% - 38px))}
-      .nav-links>a:not(.nav-book):not(.nav-instagram){display:none}
+      .nav-links>a:not(.nav-book):not(.nav-hangar):not(.nav-instagram){display:none}
       .hero{min-height:auto;padding-top:132px}
       h1{font-size:clamp(4rem,8.5vw,5.5rem);letter-spacing:-.05em;line-height:.92}
       .nav{inset:7px 7px auto}
@@ -507,6 +532,8 @@
       .hero-copy>p,.lead,.story-copy{font-size:.95rem}
       .hero-actions{display:grid;width:100%;gap:12px}
       .orange-button,.blue-button{width:100%}
+      .hangar-cta-row{width:100%;margin-top:14px}
+      .hangar-button{min-height:48px;font-size:.62rem;letter-spacing:.14em}
       .hero-actions .orange-button::after,.hero-actions .blue-button::after{height:76px;top:calc(100% + 5px);opacity:.72;filter:blur(8px)}
       .standard-panel,.service-card,.feature-card,.priority,.form-wrap{padding:24px 20px;border-radius:20px}
       .standard-item{grid-template-columns:49px 1fr;gap:12px;padding:18px 0}
@@ -757,6 +784,7 @@
         <a href="#automotive">Auto</a>
         <a href="#aviation">Aviation</a>
         <a href="#marine">Marine</a>
+        <a class="nav-hangar" href="hangar.html">The Hangar</a>
         <a href="#story">About</a>
         <a href="#process">Standards</a>
         <a href="#contact">Contact</a>
@@ -774,6 +802,9 @@
         <div class="hero-actions">
           <a class="orange-button" href="https://h1p-100540.square.site/" target="_blank" rel="noopener noreferrer">Book Here <span aria-hidden="true">↗</span></a>
           <a class="blue-button" href="mailto:admin@h1preservation.com?subject=Private%20Consultation%20Request">Request Private Consultation <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hangar-cta-row">
+          <a class="hangar-button" href="hangar.html">View The Hangar <span aria-hidden="true">↗</span></a>
         </div>
       </div>
 
@@ -960,6 +991,7 @@
       <p>Auto • Aviation • Marine</p>
       <div class="footer-links">
         <a class="text-action" href="https://h1p-100540.square.site/" target="_blank" rel="noopener noreferrer">Book Here ↗</a>
+        <a class="text-action" href="hangar.html">The Hangar ↗</a>
         <a class="text-action" href="https://www.instagram.com/h1preservation/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
         <a class="text-action" href="mailto:admin@h1preservation.com?subject=Hangar%20One%20Preservation%20Inquiry">Email Hangar One ↗</a>
         <a class="text-action" href="#top">Return to Top ↑</a>
