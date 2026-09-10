@@ -1200,7 +1200,185 @@ img, svg { display: block; max-width: 100%; }
  .h1-seo-card{min-height:250px}
  .h1-seo-card h3{margin-top:45px}
 }
+/* =========================================
+   ADIRONDACK NATIONALS GIVEAWAY BANNER
+========================================= */
 
+.h1-giveaway-banner {
+  position: relative;
+  z-index: 30;
+
+  width: 100%;
+  min-height: 58px;
+
+  margin-top: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+
+  padding: 10px 24px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #050506 0%,
+      #111113 50%,
+      #050506 100%
+    );
+
+  border-bottom: 1px solid rgba(255,255,255,.13);
+
+  color: #fff;
+}
+
+.h1-giveaway-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 26%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #ed1c24,
+    transparent
+  );
+}
+
+.h1-giveaway-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  font-size: .68rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.h1-giveaway-banner-text strong {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.h1-giveaway-banner-text span {
+  color: #9d9da2;
+}
+
+.h1-giveaway-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+  padding: 0 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff2931,
+      #bd090f
+    );
+
+  color: #fff !important;
+
+  clip-path:
+    polygon(
+      0 0,
+      calc(100% - 10px) 0,
+      100% 10px,
+      100% 100%,
+      10px 100%,
+      0 calc(100% - 10px)
+    );
+
+  font-size: .63rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.h1-giveaway-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(237,28,36,.28);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 820px) {
+
+  .h1-giveaway-banner {
+    margin-top: 72px;
+
+    min-height: 64px;
+
+    gap: 14px;
+
+    padding: 9px 14px;
+  }
+
+  .h1-giveaway-banner-text {
+    display: block;
+    flex: 1;
+
+    font-size: .61rem;
+    line-height: 1.35;
+  }
+
+  .h1-giveaway-banner-text span {
+    display: block;
+    margin-top: 3px;
+
+    font-size: .56rem;
+    letter-spacing: .07em;
+  }
+
+  .h1-giveaway-button {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: .56rem;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .h1-giveaway-banner {
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 10px;
+  }
+
+  .h1-giveaway-banner-text strong {
+    font-size: .58rem;
+    letter-spacing: .10em;
+  }
+
+  .h1-giveaway-banner-text span {
+    font-size: .51rem;
+  }
+
+  .h1-giveaway-button {
+    padding: 0 10px;
+
+    font-size: .52rem;
+
+    letter-spacing: .08em;
+  }
+
+}
 </style>
 <title>Auto Detailing & Ceramic Coating Saratoga Springs NY | Hangar One Preservation</title>
 <meta name="description" content="Premium mobile auto detailing, System X ceramic coating and paint correction in Saratoga Springs, Ballston Spa, Malta and the Capital Region. Preservation-focused interior and exterior vehicle care from Hangar One Preservation.">
@@ -1227,6 +1405,21 @@ img, svg { display: block; max-width: 100%; }
 </a>
 </div>
 </header>
+
+<!-- ADIRONDACK NATIONALS GIVEAWAY BANNER -->
+<div class="h1-giveaway-banner">
+
+  <div class="h1-giveaway-banner-text">
+    <strong>ADIRONDACK NATIONALS GIVEAWAY</strong>
+    <span>Win a Complete Detail + 1-Year Ceramic Coating</span>
+  </div>
+
+  <a href="/giveaway.html" class="h1-giveaway-button">
+    ENTER GIVEAWAY →
+  </a>
+
+</div>
+
 <main id="top">
 <section class="funnel-hero lean-hero">
 <div class="funnel-glow" aria-hidden="true">
